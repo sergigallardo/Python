@@ -1,11 +1,12 @@
 def main():
-   num = int(input("Introdueix un numero:"))
+    while True:
+        num = int(input("Introdueix un numero:"))
 
-for num = range(1, 10):
-print ("correcte")
-
-
-
+        if num>=0 and num<=10:
+            print("Correcte")
+            break
+        else:
+            num=int(input("Error! introdueix un altre numero:"))
 
 if __name__ == "__main__":
     main()
