@@ -1,0 +1,47 @@
+
+
+#include <stdio.h>
+
+int main(){
+   int x,m,i,sum=0,mit,max=0,min=0,aux;
+   
+   printf("Introdueix quants nombres vols introduir:");
+   scanf("%d", &m);
+   int array[m];
+   for(i=0; i<m; ++i){
+       printf("Introdueix un número entre 0 i 10:");
+       scanf("%d",&array[i]);
+       sum += array[i];/*Suma per després fer la mitjana del número de nombres introduits*/
+       }
+       mit = sum/m;/*Mitja de la suma de l'array*/
+    /*Valor màxim introduit al array*/
+    for(i=0; i<m; ++i){
+        if (array[i]>max){
+         max=array[i];
+        }
+    }
+    /*Valor mínim introduit al array*/
+    for(i=0; i<m; ++i){
+        if (array[i]<min){
+            min=array[i];
+        }
+    }
+   /*Ordenar de forma ascendent*/ 
+   for(i=0; i<m; ++i){
+       for(x=i+1;x<m-1;x++){
+           if(array[i]>array[x]){
+               aux=array[i];
+               array[i]=array[x];
+               array[x]=aux;
+           }
+       }
+   }
+    printf("Numeros array ordenats:");
+    for(i=0; i<m;++i){
+        printf("%d", array[i]);
+    }
+    printf("\n");
+    printf("La mitjana es:%d\n",mit);
+    printf("El valor maxim es:%d\n",max);
+    printf("El valor minim es:%d\n",min);
+}
