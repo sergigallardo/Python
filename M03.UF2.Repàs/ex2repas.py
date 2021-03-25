@@ -4,7 +4,7 @@ def llista():
 
     while x < 146:
         if x % 2 == 0:
-            y = x / 5
+            y = x // 5
             num.append(y)
         else:
             y = x * 2
