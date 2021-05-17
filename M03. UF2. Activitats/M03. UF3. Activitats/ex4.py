@@ -11,26 +11,32 @@
 #3.Mostri les dades tabulades i permeti mostra-les segons l’índex introduït per teclat
 
 
-def formulari():
-    capçalera = ["id", "grup", "nom_canço", "data", "num_visualitzacions"]
-    a = []
-    b = []
-    c = []
-    d = []
-    e = []
-    n_videos = int(input("Introdueix el numeros que vols introduir:"))
-    for i in range(n_videos):
-        a.append(int(input("Introdueix el ID numeric:\n")))
-        b.append(input("Introdueix el grup/cantant:\n"))
-        c.append(input("Nom de la canço:\n"))
-        d.append(input("Introdueix una data:\n"))
-        e.append(int(input("Numero de visualitzacions\n")))
+import pandas as pd
 
-    print("id\tgrup\tnom_canço\tdata\tnum_visualitzacions")
-    for i in range (n_videos):
-        print(a[i],b[i],c[i],d[i],e[i])
+def formulari():
+    capçalera = ("id\tgrup\tnom_canço\tdata\tnum_visualitzacions")
+    n_videos = int(input("Introdueix el numeros que vols introduir:"))
+    pd.a = []
+    pd.b = []
+    pd.c = []
+    pd.d = []
+    pd.e = []
+
+    for i in range(n_videos):
+        pd.a.append(int(input("Introdueix el ID numeric:\n")))
+        pd.b.append(input("Introdueix el grup/cantant:\n"))
+        pd.c.append(input("Nom de la canço:\n"))
+        pd.d.append(input("Introdueix una data:\n"))
+        pd.e.append(int(input("Numero de visualitzacions:\n")))
+    print("---------------------------------------------------")
+    print(capçalera)
+    print("---------------------------------------------------")
+    for i in range(n_videos):
+        print(pd.a[i], pd.b[i], pd.c[i], pd.d[i], pd.e[i])
+        print("---------------------------------------------------")
 
 def main():
     formulari()
+
 if __name__ == '__main__':
-        main()
+    main()
